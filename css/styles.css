@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Open+Sans&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  color: #4F5964;
+  font-family: 'Montserrat', sans-serif;
+  color: #4F5964;
+}
+body {
+  background-color: #FDFBFB;
+}
+a {
+  color: #4F5964;
+  text-decoration: none;
+}
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+.bubble {
+  position: absolute;
+  z-index: -1;
+}
+.first {
+  top: 20%;
+  left: 15%;
+}
+.second {
+  top: 10%;
+  right: 0;
+}
+nav {
+  padding: 20px;
+}
+nav ul {
+  list-style-type: none;
+  float: right;
+}
+nav ul li {
+  float: left;
+}
+nav ul li a {
+  padding: 0 20px;
+}
+.container {
+  text-align: center;
+  width: 60%;
+  margin: 150px auto;
+}
+h1 {
+  font-weight: 800;
+  font-size: 4em;
+  margin-bottom: 0;
+}
+.container p {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+@media only screen and (max-width: 792px) {
+	.container {
+    width: 100%;
+    margin: 100px auto;
+  }
+  h1 {
+    font-size: 2.6em;
+  }
+  .container p {
+    font-size: 1em;
+  }
+}
+
+/* Grid System from http://www.responsivegridsystem.com/calculator */
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+/*  GRID OF TWELVE  */
+.span_12_of_12 {
+	width: 100%;
+}
+
+.span_11_of_12 {
+  width: 91.53%;
+}
+.span_10_of_12 {
+  width: 83.06%;
+}
+
+.span_9_of_12 {
+	width: 74.6%;
+}
+
+.span_8_of_12 {
+ 	width: 66.13%;
+}
+
+.span_7_of_12 {
+ 	width: 57.66%;
+}
+
+.span_6_of_12 {
+ 	width: 49.2%;
+}
+
+.span_5_of_12 {
+ 	width: 40.73%;
+}
+
+.span_4_of_12 {
+ 	width: 32.26%;
+}
+
+.span_3_of_12 {
+ 	width: 23.8%;
+}
+
+.span_2_of_12 {
+ 	width: 15.33%;
+}
+
+.span_1_of_12 {
+ 	width: 6.866%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 1% 0 1% 0%; }
+    
+    .span_1_of_12, .span_2_of_12, .span_3_of_12, .span_4_of_12, .span_5_of_12, .span_6_of_12, .span_7_of_12, .span_8_of_12, .span_9_of_12, .span_10_of_12, .span_11_of_12, .span_12_of_12 {
+	width: 100%; 
+	}
+}
