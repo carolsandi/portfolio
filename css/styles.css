@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Open+Sans:wght@300;400&display=swap');
-html {
-  scroll-behavior: smooth;
-}
-body {
-  background-color: #fff;
-}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
   color: #000;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #fff;
 }
 p {
   font-family: 'Open Sans', sans-serif;
@@ -21,16 +21,21 @@ a {
   color: #ff782d;
   text-decoration: none;
 }
+button:hover, a:hover {
+  cursor: pointer;
+}
 ul {
   list-style-type: none;
 }
 section {
-  min-height: 90vh;
+  position: relative;
   width: 100%;
   padding: 0px 20px 20px 20px;
   text-align: center;
 }
 section h3 {
+  position: relative;
+  z-index: 100;
   color: #8b456a;
   font-weight: 600;
   font-size: 20px;
@@ -55,20 +60,69 @@ nav ul li a {
   text-transform: uppercase;
 }
 #home {
+  min-height: 88vh;
   background-color: #8b456a;
   text-align: center;
-  padding-top: 35%;
+  position: relative;
 }
-#home h1 {
+#home .heading {
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+#home .heading h1 {
   color: #fff;
-  font-size: 60px;
+  font-size: 48px;
   font-weight: 800;
 }
-#home h3 {
-  color: rgba(255, 255, 255, 0.699);
+#home .heading h3 {
+  color: rgba(255, 255, 255, 0.7);
   font-weight: 400;
-  font-size: 16px;
-  margin: 10px auto;
+  font-size: 14px;
+}
+#home:before {
+  position: absolute;
+  content: '';
+  width: 50%;
+  height: 80px;
+  bottom: 0px;
+  left: 0;
+  background: #dcc8d3;
+  transform: skewY(-10deg);
+}
+#home:after {
+  position: absolute;
+  content: '';
+  width: 50%;
+  height: 80px;
+  bottom: 0px;
+  right: 0;
+  background: #dcc8d3;
+  transform: skewY(10deg);
+}
+#about:before {
+  position: absolute;
+  content: '';
+  width: 50%;
+  height: 125px;
+  top: -70px;
+  left: 0;
+  background: #fff;
+  transform: skewY(-8deg);
+}
+#about:after {
+  position: absolute;
+  content: '';
+  width: 50%;
+  height: 125px;
+  top: -70px;
+  right: 0;
+  background: #fff;
+  transform: skewY(8deg);
 }
 #skills {
   display: flex;
@@ -116,7 +170,7 @@ nav ul li a {
   padding: 2px 10px 2px 0px;
 }
 #projects {
-  padding-bottom: 80px;
+  padding-bottom: 150px;
 }
 #contact {
   background-color: #8b456a;
@@ -142,7 +196,7 @@ nav ul li a {
   width: 100%;
   margin-bottom: 3px;
   border: none;
-  background-color: rgba(255, 255, 255, 0.699);
+  background-color: rgba(255, 255, 255, 0.7);
   padding: 5px;
   color: #000;
 }
@@ -152,4 +206,89 @@ nav ul li a {
   padding: 5px 15px;
   color: #fff;
   font-weight: 600;
+}
+#projects:before {
+  position: absolute;
+  content: '';
+  width: 50%;
+  height: 80px;
+  bottom: 0px;
+  left: 0;
+  background: #dcc8d3;
+  transform: skewY(-10deg);
+}
+#projects:after {
+  position: absolute;
+  content: '';
+  width: 50%;
+  height: 80px;
+  bottom: 0px;
+  right: 0;
+  background: #dcc8d3;
+  transform: skewY(10deg);
+}
+#contact:before {
+  position: absolute;
+  content: '';
+  width: 50%;
+  height: 125px;
+  top: -70px;
+  left: 0;
+  background: #8b456a;
+  transform: skewY(-8deg);
+}
+#contact:after {
+  position: absolute;
+  content: '';
+  width: 50%;
+  height: 125px;
+  top: -70px;
+  right: 0;
+  background: #8b456a;
+  transform: skewY(8deg);
+}
+@media only screen and (min-width: 600px) {
+  nav {
+    height: 55px;
+  }
+  nav ul {
+    width: 300px;
+    height: 55px;
+    margin-left: auto;
+    margin-right: 50px;
+  }
+  nav ul li a{
+    font-size: 14px;
+  }
+  section {
+    padding: 0px 50px 30px 50px;
+  }
+  #home .heading h1 {
+    font-size: 60px;
+  }
+  #home .heading h3 {
+    font-size: 22px;
+  }
+  #skills {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #about p, #skills, #projects .project-grid, #contact form {
+    max-width: 768px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  #projects .project-grid {
+    display: flex;
+    margin-bottom: 30px;
+  }
+  #projects .project-grid img {
+    width: 45%;
+  }
+  #projects .project-grid .project-card {
+    margin-left: 20px;
+    text-align: left;
+  }
 }
